@@ -1,4 +1,12 @@
-function doSomething() {
-    console.log("This is the very first lesson about typescript");
+interface Person {
+    firstname: string;
+    lastname: string;
 }
-doSomething();
+function greeter(person: Person) {
+    console.log( "hello " + person.firstname);
+}
+
+greeter({
+    firstname: "lara",
+    lastname: "joey"
+});

@@ -1,4 +1,7 @@
-function doSomething() {
-    console.log("This is the very first lesson about typescript");
+function greeter(person) {
+    console.log("hello " + person.firstname);
 }
-doSomething();
+greeter({
+    firstname: "lara",
+    lastname: "joey"
+});
