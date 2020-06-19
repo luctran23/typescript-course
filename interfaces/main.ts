@@ -1,10 +1,19 @@
 interface Person {
-    name: string;
+    name?: string;
+    height?: number;
 }
 
-function greeter(person: Person) {
-    console.log("Hello, " + person.name);
+function greeter(person: Person): {name: string; tall: number} {
+    let newPerson = {name: "Diamond", tall: 20};
+    if(person.name) {
+        newPerson.name = person.name;
+    }
+    if(person.height) {
+        newPerson.tall = person.height;
+    }
+    return newPerson;
 }
-let girl = {name: 'lara', age: 21};
+let girl = {name: 'lara', status: 'single'};
 
-greeter(girl);
+let x = greeter(girl);
+console.log(x);
